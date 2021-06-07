@@ -1,17 +1,21 @@
 import firebase from "firebase/app";
 import "firebase/analytics";
 import "firebase/auth";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import firebaseConfig from "./firebase.config";
 import "../Authentication/Login.css";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
+import { UserContext } from "../../App";
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
 const Login = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
+  const location = useLocation();
+  let { from } = location.state || { from: { pathname: "/home" } };
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -30,8 +34,11 @@ const Login = () => {
         userInfo.errorCode = "";
         userInfo.success = true;
         setUser(userInfo);
+        setLoggedInUser(userInfo);
         alert("Your Logged In Successful");
         history.push("/home");
+        setUserToken();
+        history.replace(from);
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -51,7 +58,19 @@ const Login = () => {
     userInfo[e.target.name] = e.target.value;
     setUser(userInfo);
   };
-  console.log(user);
+
+  const setUserToken = () => {
+    firebase
+      .auth()
+      .currentUser.getIdToken(/* forceRefresh */ true)
+      .then(function (idToken) {
+        sessionStorage.setItem("token", idToken);
+      })
+      .catch(function (error) {
+        // Handle error
+      });
+  };
+  console.log(loggedInUser, "hey im here");
   return (
     <div className="login-page">
       <div className="form">

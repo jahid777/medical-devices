@@ -1,0 +1,10 @@
+.card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 50px;
+  transition: 200ms linear;
+}
+.card:hover {
+  transform: scale(1.05);
+  /* transform: rotate(360deg);  */
+  transition: 200ms linear;
+}

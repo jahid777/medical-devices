@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./Components/Authentication/Login";
-import Home from "./Components/Home/Home";
+import Device from "./Components/Device/Device";
 import PrivateRoute from "./Components/Authentication/PrivateRoute";
 
 export const UserContext = createContext();
@@ -18,8 +18,8 @@ function App() {
           <Route exact path="/login">
             <Login />
           </Route>
-          <PrivateRoute path="/home">
-            <Home />
+          <PrivateRoute path="/brand">
+            <Device />
           </PrivateRoute>
         </Switch>
       </Router>

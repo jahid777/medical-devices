@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import DeviceDetails from "../DeviceDetails/DeviceDetails";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import p1 from "../../images/p1.jpg";
+import p2 from "../../images/p2.jpg";
+import p3 from "../../images/p3.jpg";
+import p4 from "../../images/p4.jpg";
+import p5 from "../../images/p5.jpg";
+import p6 from "../../images/p6.jpg";
 
 export const fakeData = [
   {
     id: 1,
-    image:
-      "https://www.szbestman.com/public/upload/image/20210127/756828c92da94140ddb7b0c85e259211.jpg",
+    image: p1,
     name: "Ultrasonic Vascular Doppler Detector",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque.",
@@ -16,8 +21,7 @@ export const fakeData = [
   },
   {
     id: 2,
-    image:
-      "https://www.szbestman.com/public/upload/image/20200924/d8a695b3f7a898f0103aebe3d9464f2d.jpg",
+    image: p2,
     name: "Fetal Doppler",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, autem.",
@@ -26,8 +30,7 @@ export const fakeData = [
   },
   {
     id: 3,
-    image:
-      "	https://www.szbestman.com/public/upload/image/20210128/fb2e03f9890d5138ac1c3d607ee3fc37.jpg",
+    image: p3,
     name: "Blood And Infusion Warmers",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",
@@ -36,8 +39,7 @@ export const fakeData = [
   },
   {
     id: 4,
-    image:
-      "https://www.szbestman.com/public/upload/image/20210129/659cc5cf1b6b1874a2a3e6bb65a166e2.jpg",
+    image: p4,
     name: "Syringe Destroyer",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",
@@ -46,8 +48,7 @@ export const fakeData = [
   },
   {
     id: 5,
-    image:
-      "	https://www.szbestman.com/public/upload/image/20200919/8d470cc3abaf318df4e70383b0021ac3.jpg",
+    image: p5,
     name: "Pulse Oximeter",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",
@@ -56,8 +57,7 @@ export const fakeData = [
   },
   {
     id: 6,
-    image:
-      "https://www.szbestman.com/public/upload/image/20201112/49b06acd9962c52bb0213a710f89f8ba.jpg",
+    image: p6,
     name: "Infrared Thermometer",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./Components/Authentication/Login";
 import Device from "./Components/Device/Device";
 import PrivateRoute from "./Components/Authentication/PrivateRoute";
+import ModalPopUp from "./Components/ModalPopUp/ModalPopUp";
 
 export const UserContext = createContext();
 
@@ -18,9 +19,12 @@ function App() {
           <Route exact path="/login">
             <Login />
           </Route>
-          <PrivateRoute path="/brand">
+          <PrivateRoute path="/products">
             <Device />
           </PrivateRoute>
+          <Route exact path="/modalPopUp">
+            <ModalPopUp />
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>

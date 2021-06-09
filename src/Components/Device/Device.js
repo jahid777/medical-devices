@@ -11,7 +11,7 @@ export const fakeData = [
     name: "Ultrasonic Vascular Doppler Detector",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque.",
-    price: "$1000",
+    price: 1000,
     stock: "12ps",
   },
   {
@@ -21,7 +21,7 @@ export const fakeData = [
     name: "Fetal Doppler",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, autem.",
-    price: "$2000",
+    price: 1200,
     stock: "10ps",
   },
   {
@@ -31,7 +31,7 @@ export const fakeData = [
     name: "Blood And Infusion Warmers",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",
-    price: "$1200",
+    price: 1200,
     stock: "14ps",
   },
   {
@@ -41,7 +41,7 @@ export const fakeData = [
     name: "Syringe Destroyer",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",
-    price: "$1200",
+    price: 1200,
     stock: "14ps",
   },
   {
@@ -51,7 +51,7 @@ export const fakeData = [
     name: "Pulse Oximeter",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",
-    price: "$1000",
+    price: 1000,
     stock: "12ps",
   },
   {
@@ -61,7 +61,7 @@ export const fakeData = [
     name: "Infrared Thermometer",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, atque tahsuse.",
-    price: "$1200",
+    price: 1500,
     stock: "14ps",
   },
 ];
@@ -78,6 +78,7 @@ const Device = () => {
           ))}
         </div>
       </section>
+
       <Footer />
     </main>
   );

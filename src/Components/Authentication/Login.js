@@ -15,7 +15,7 @@ const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
   const location = useLocation();
-  let { from } = location.state || { from: { pathname: "/brand" } };
+  let { from } = location.state || { from: { pathname: "/products" } };
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -35,7 +35,7 @@ const Login = () => {
         userInfo.success = true;
         setUser(userInfo);
         setLoggedInUser(userInfo);
-        alert("Your Logged In Successful");
+        // alert("Your Logged In Successful");
         history.push("/home");
         setUserToken();
         history.replace(from);
